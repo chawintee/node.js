@@ -100,12 +100,15 @@ function setTimeoutAndLog(input){
     })
 }
 
-setTimeoutAndLog('a')
-    .then(function(result){
-        return setTimeoutAndLog("b")
-    }).then(function(result){
-        return setTimeoutAndLog('c')
-    }).then(function(result){
-        return setTimeoutAndLog('d')
-    }).then(function(result){})
+async function runcode(){
+    const input1 = await setTimeoutAndLog('a');
+    const input2 = await setTimeoutAndLog('b');
+    const input3 = await setTimeoutAndLog('c');
+    const input4 = await setTimeoutAndLog('d');
+    const input5 = await setTimeoutAndLog('e');
+    const input6 = await setTimeoutAndLog('f');
+    const input7 = await setTimeoutAndLog('g');
+    const input8 = await setTimeoutAndLog('h');
+}
                         
+runcode();
